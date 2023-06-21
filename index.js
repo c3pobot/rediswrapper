@@ -12,9 +12,9 @@ module.exports = class Redis{
     }
     if(opt.passwd) this._opt.password = opt.passwd;
     this._redis = this.node_redis.createClient(this._opt);
-    this._redis.on('error', err => console.error(this._type+' client error', err));
-    this._redis.on('connect', () => console.log(this._type+' client is connected'));
-    this._redis.on('reconnecting', () => console.log(this._type+' client is reconnecting'));
+    //this._redis.on('error', err => console.error(this._type+' client error', err));
+    //this._redis.on('connect', () => console.log(this._type+' client is connected'));
+    //this._redis.on('reconnecting', () => console.log(this._type+' client is reconnecting'));
     this._redis.on('ready', () => console.log(this._type+' client is ready'));
   }
   async init(){
