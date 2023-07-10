@@ -7,7 +7,7 @@ module.exports = class Redis{
       debug: this.logInfo
     }
     this.notify = true
-    if(opts.logger) this.log = opts.logger
+    if(opt.logger) this.log = opt.logger
     this.node_redis = require('redis')
     this._type = opt.type || 'redis'
     this._ttl = (opt.ttl || 600)
